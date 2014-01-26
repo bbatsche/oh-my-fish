@@ -11,15 +11,15 @@
 # some benefit from displaying the count here, but that would also make the
 # size of these strings vary, which I'd rather not do...
 set -l cn (set_color normal 2>/dev/null)
-set -g vi_mode_normal  (set_color blue 2>/dev/null)'n'$cn
-set -g vi_mode_replace (set_color red 2>/dev/null)'r'$cn
-set -g vi_mode_REPLACE (set_color --background=red 2>/dev/null)'R'$cn
-set -g vi_mode_insert  (set_color green 2>/dev/null)'i'$cn
-set -g vi_mode_delete  (set_color red 2>/dev/null)'d'$cn
-set -g vi_mode_change  (set_color yellow 2>/dev/null)'c'$cn
-set -g vi_mode_g       (set_color blue 2>/dev/null)'g'$cn
-set -g vi_mode_lower   (set_color blue 2>/dev/null)'u'$cn
-set -g vi_mode_upper   (set_color blue 2>/dev/null)'U'$cn
+set -g vi_mode_normal   (set_color blue 2>/dev/null)'n'$cn
+set -g vi_mode_replace  (set_color red 2>/dev/null)'r'$cn
+set -g vi_mode_REPLACE  (set_color --background=red 2>/dev/null)'R'$cn
+set -g vi_mode_insert   (set_color green 2>/dev/null)'i'$cn
+set -g vi_mode_delete   (set_color red 2>/dev/null)'d'$cn
+set -g vi_mode_change   (set_color yellow 2>/dev/null)'c'$cn
+set -g vi_mode_g        (set_color blue 2>/dev/null)'g'$cn
+set -g vi_mode_lower    (set_color blue 2>/dev/null)'u'$cn
+set -g vi_mode_upper    (set_color blue 2>/dev/null)'U'$cn
 set -g vi_mode_swapcase (set_color blue 2>/dev/null)'~'$cn
 
 set -g __vi_mode_undo_cmdline ''
@@ -210,6 +210,20 @@ function __vi_mode_g -d "vi-like key bindings for fish (commands starting with g
     end
 end
 
+function __vi_mode_delete
+	__vi_mode delete
+    bind --erase --all
+    __vi_mode_common
+	__vi_mode_save_cmdline
+
+	__vi_mode_bind_all "commandline -f delete-char; commandline -i %k"
+    if functions -q vi_mode_user
+        vi_mode_user delete
+    end
+
+	bind d '__vi_mode_save_cmdline; commandline -f kill-whole-line; vi_mode_normal'
+end
+
 function vi_mode_normal -d "WIP vi-like key bindings for fish (normal mode)"
     __vi_mode normal
 
@@ -249,6 +263,7 @@ function vi_mode_normal -d "WIP vi-like key bindings for fish (normal mode)"
     bind s '__vi_mode_save_cmdline; commandline -f delete-char; vi_mode_insert'
     bind r __vi_mode_replace
     bind R __vi_mode_overwrite
+    bind d __vi_mode_delete
 
     # XXX: The automagic completion sometimes displays the case from the
     # command it wants to complete instead of the case actually on the
@@ -259,7 +274,7 @@ function vi_mode_normal -d "WIP vi-like key bindings for fish (normal mode)"
     bind \~ '__vi_mode_save_cmdline; commandline -f forward-char; __vi_mode_direction_command swapcase l'
 
     __vi_mode_bind_directions normal vi_mode_normal ''
-    bind d '__vi_mode_bind_directions delete vi_mode_normal __vi_mode_save_cmdline'
+    # bind d '__vi_mode_bind_directions delete vi_mode_normal __vi_mode_save_cmdline'
     bind c '__vi_mode_bind_directions change vi_mode_insert __vi_mode_save_cmdline'
 
     # Override generic direction code for simple things that have a close
