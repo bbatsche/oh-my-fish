@@ -16,7 +16,7 @@
 
 Oh-my-fish is built for recent versions of the fish shell, namely "fish 2.0".
 
-    curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.sh | sh
+    curl -L https://github.com/bbatsche/oh-my-fish/raw/master/tools/install.sh | sh
 
 If you want to install it manually, keep reading.
 
@@ -25,7 +25,7 @@ If you want to install it manually, keep reading.
 Enabling a new plugin or theme is as easy as it should be. Open your fish configuration file
 `~/.config/fish/config.fish` and specify the theme and the plugins you want to use.
 
-As an example, to enable rails and git plugins add this line `set fish_plugins git rails` 
+As an example, to enable rails and git plugins add this line `set fish_plugins git rails`
 to your configuration file.
 
 ## Customization
@@ -63,7 +63,7 @@ Substitute /bin/bash with /bin/tcsh or /bin/zsh as appropriate.
 
 1. Clone the repository
 ```
-    git clone git://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
+    git clone git://github.com/bbatsche/oh-my-fish.git ~/.oh-my-fish
 ```
 
 2. Create a new fish config by copying the fish template we've provided.
