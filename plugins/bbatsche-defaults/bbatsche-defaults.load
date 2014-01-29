@@ -1,0 +1,22 @@
+set PATH "."
+set PATH $PATH "~/bin"
+set PATH $PATH "/opt/local/sbin" "/opt/local/bin"
+set PATH $PATH "/usr/local/sbin" "/usr/local/bin"
+set PATH $PATH "/usr/sbin" "/usr/bin"
+set PATH $PATH "/sbin" "/bin"
+
+function la --description 'List contents of directory, including hidden files in directory using long format'
+  ls -lAhFG $argv
+end
+
+function ll --description 'List contents of directory using long format'
+  ls -lhFG $argv
+end
+
+function px
+    ps xco pid,pcpu,pmem,command
+end
+
+function pxa
+    ps axco user,pid,pcpu,pmem,command
+end
