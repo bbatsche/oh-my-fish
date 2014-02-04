@@ -59,7 +59,7 @@ function fish_prompt
 
     set_color white
 
-    set "date" (date "+%m.%e.%Y %l.%M %p")
+    set "date" (date "+%-m.%-d.%Y %-I.%M %p" | tr '[:upper:]' '[:lower:]')
 
     echo -s $date $__fish_prompt_normal "]"
 
