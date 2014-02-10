@@ -21,6 +21,11 @@ set -g __fish_git_prompt_color_cleanstate green bold
 
 function fish_right_prompt
     if hg id > /dev/null ^ /dev/null
+        set hg_clean (set_color -o green)"✔"
+        set hg_status (set_color magenta)(hg prompt "{update}{status|modified|unknown}" ^ /dev/null)
+        set hg_outgoing (set_color cyan)(hg prompt "{↑{outgoing|count}}" ^ /dev/null)
+        set hg_incoming (set_color blue)(hg prompt "{↓{incoming|count}}" ^ /dev/null)
+
         echo -n -s $__fish_prompt_normal "("
 
         set_color white
@@ -29,17 +34,17 @@ function fish_right_prompt
 
         echo -n -s $__fish_prompt_normal ":"
 
-        set_color magenta
+        if [ $hg_status ]
+            echo -n -s $hg_status
+        else
+            echo -n -s $hg_clean
 
-        hg prompt "{update}{status|modified|unknown}" ^ /dev/null
+            if test -n "$hg_outgoing" -o -n "$hg_incoming"
+                echo -n " "
+            end
+        end
 
-        set_color cyan
-
-        hg prompt "{↑{outgoing|count}}" ^ /dev/null
-
-        set_color blue
-
-        hg prompt "{↓{incoming|count}}" ^ /dev/null
+        echo -n -s $hg_outgoing $hg_incoming
 
         echo -n -s $__fish_prompt_normal ")"
     end
