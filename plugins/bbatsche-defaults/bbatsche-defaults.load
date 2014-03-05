@@ -20,3 +20,7 @@ end
 function pxa
     ps axco user,pid,pcpu,pmem,command
 end
+
+function logout --description 'I am so used to running logout instead of exit. Let\'s just give up already.'
+    exit
+end
