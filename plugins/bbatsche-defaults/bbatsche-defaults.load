@@ -4,6 +4,9 @@ set PATH $PATH "/opt/local/sbin" "/opt/local/bin"
 set PATH $PATH "/usr/local/sbin" "/usr/local/bin"
 set PATH $PATH "/usr/sbin" "/usr/bin"
 set PATH $PATH "/sbin" "/bin"
+set PATH $PATH "$HOME/.composer/vendor/bin"
+
+set fish_greeting Type (set_color green)help(set_color normal) for instructions on how to use the fish shell
 
 function la --description 'List contents of directory, including hidden files in directory using long format'
   ls -lAhFG $argv
