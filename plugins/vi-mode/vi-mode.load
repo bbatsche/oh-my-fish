@@ -313,6 +313,13 @@ function vi_mode_insert -d "vi-like key bindings for fish (insert mode)"
 
     fish_default_key_bindings
 
+    if functions | grep "peco_select_history" > /dev/null
+        bind \cr peco_select_history
+    end
+    if function | grep "percol_select_history" > /dev/null
+        bind \cr peco_select_history
+    end
+
     __vi_mode_common_insert
 end
 
