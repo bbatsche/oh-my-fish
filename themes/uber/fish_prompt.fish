@@ -1,3 +1,20 @@
+function fish_vi_prompt_cm --description "Displays the current mode"
+  echo "("
+  switch $fish_bind_mode
+    case default
+      set_color --bold red
+      echo "N"
+    case insert
+      set_color --bold white
+      echo "I"
+    case visual
+      set_color --bold --background magenta white
+      echo "V"
+  end
+  set_color normal
+  echo ")"
+end
+
 function fish_prompt
     set -l last_status $status
 
@@ -63,5 +80,5 @@ function fish_prompt
 
     echo -s $__fish_prompt_date $__fish_prompt_normal "]"
 
-    echo -n -s $__fish_prompt_normal "⎣ ($vi_mode) " $__fish_prompt_arrow_color "➤ " $__fish_prompt_normal
+    echo -n -s $__fish_prompt_normal "⎣ " (fish_vi_prompt_cm) $__fish_prompt_arrow_color "➤ " $__fish_prompt_normal
 end
