@@ -316,7 +316,7 @@ function vi_mode_insert -d "vi-like key bindings for fish (insert mode)"
     if functions | grep "peco_select_history" > /dev/null
         bind \cr peco_select_history
     end
-    if function | grep "percol_select_history" > /dev/null
+    if functions | grep "percol_select_history" > /dev/null
         bind \cr peco_select_history
     end
 
