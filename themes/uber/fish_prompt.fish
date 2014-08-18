@@ -59,9 +59,9 @@ function fish_prompt
 
     set_color white
 
-    set "date" (date "+%-m.%-d.%Y %-I.%M %p" | tr '[:upper:]' '[:lower:]')
+    set __fish_prompt_date (date "+%-m.%-d.%Y %-I.%M %p" | tr '[:upper:]' '[:lower:]')
 
-    echo -s $date $__fish_prompt_normal "]"
+    echo -s $__fish_prompt_date $__fish_prompt_normal "]"
 
     echo -n -s $__fish_prompt_normal "⎣ ($vi_mode) " $__fish_prompt_arrow_color "➤ " $__fish_prompt_normal
 end
