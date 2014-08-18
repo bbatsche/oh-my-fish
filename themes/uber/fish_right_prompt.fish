@@ -1,7 +1,7 @@
 set -g __fish_git_prompt_show_informative_status 1
 set -g __fish_git_prompt_hide_untrackedfiles 1
 
-set -g __fish_git_prompt_color_branch magenta bold
+set -g __fish_git_prompt_color_branch -o magenta
 set -g __fish_git_prompt_showupstream "informative"
 set -g __fish_git_prompt_char_upstream_ahead "↑"
 set -g __fish_git_prompt_char_upstream_behind "↓"
@@ -17,11 +17,11 @@ set -g __fish_git_prompt_color_dirtystate blue
 set -g __fish_git_prompt_color_stagedstate yellow
 set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
-set -g __fish_git_prompt_color_cleanstate green bold
+set -g __fish_git_prompt_color_cleanstate -o green
 
 function fish_right_prompt
     if hg id > /dev/null ^ /dev/null
-        set hg_clean (set_color -o green)"✔"
+        set hg_clean (set_color -o green)("✔" ^ /dev/null)
         set hg_status (set_color magenta)(hg prompt "{update}{status|modified|unknown}" ^ /dev/null)
         set hg_outgoing (set_color cyan)(hg prompt "{↑{outgoing|count}}" ^ /dev/null)
         set hg_incoming (set_color blue)(hg prompt "{↓{incoming|count}}" ^ /dev/null)
