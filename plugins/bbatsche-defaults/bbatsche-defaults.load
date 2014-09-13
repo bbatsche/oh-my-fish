@@ -28,4 +28,4 @@ function logout --description 'I am so used to running logout instead of exit. L
     exit
 end
 
-set fish_key_bindings fish_vi_key_bindings
+set -g fish_key_bindings fish_vi_key_bindings
