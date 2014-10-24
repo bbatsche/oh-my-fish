@@ -16,7 +16,7 @@ end
 
 colored blue Cloning Oh My Fish...
 type git >/dev/null
-and git clone https://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
+and git clone https://github.com/bbatsche/oh-my-fish.git ~/.oh-my-fish
 or begin
     echo git not installed
     exit
