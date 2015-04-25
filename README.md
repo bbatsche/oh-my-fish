@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/bpinto/oh-my-fish">
+<a href="https://github.com/bbatsche/oh-my-fish">
 <img width=20% src="https://cloud.githubusercontent.com/assets/958723/6883431/9beb62b0-d58b-11e4-902c-2f716859a7ad.png">
 </a>
 </p>
@@ -43,7 +43,7 @@
 Oh-my-fish is built for recent versions of the fish shell, namely "fish 2.0".
 
 ```fish
-    curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish
+    curl -L https://github.com/bbatsche/oh-my-fish/raw/master/tools/install.fish | fish
 ```
 
 If you want to install it manually, [keep reading](#manual-installation).
@@ -54,7 +54,7 @@ Enabling a new plugin or theme is as easy as it should be. Open your fish config
 
 As an example, to enable rails and git-flow plugins add this line `set fish_plugins git-flow rails` to your configuration file.
 
-Before setting down on a theme, you might want to have a go with all themes using our quick [theme switcher](https://github.com/bpinto/oh-my-fish/blob/master/plugins/theme/README.md) by typing `theme --help` on your shell.
+Before setting down on a theme, you might want to have a go with all themes using our quick [theme switcher](https://github.com/bbatsche/oh-my-fish/blob/master/plugins/theme/README.md) by typing `theme --help` on your shell.
 
 ## Customization
 
@@ -97,6 +97,6 @@ We are hoping to collect a bunch of themes for our command prompts. You can see 
     
 ## License
 
-[MIT](http://mit-license.org) © [Contributors](https://github.com/bpinto/oh-my-fish/graphs/contributors)
+[MIT](http://mit-license.org) © [Contributors](https://github.com/bbatsche/oh-my-fish/graphs/contributors)
 
 [Logo](https://cloud.githubusercontent.com/assets/958723/6847746/8d1b95b0-d3a7-11e4-866a-6bdc1eea0fe6.png) by [marcker](https://github.com/marcker):small_blue_diamond: [Attribution CC 4.0](http://creativecommons.org/licenses/by/4.0/)
