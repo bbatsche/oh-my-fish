@@ -1,12 +1,13 @@
 # Plugins
 * [__android-sdk__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/android-sdk) – [Android SDK](http://developer.android.com/sdk/index.html) integration.
 * [__archlinux__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/archlinux) – Provides a number of plugins to make using Arch Linux easier.
-* [__better-alias__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/better-alias) - Provide alias with auto completion.
+* [__better-alias__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/balias) - Provide alias with auto completion.
 * [__brew__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/brew) – [Homebrew](http://brew.sh/) integration.
 * [__bundler__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/bundler) – Use Ruby's [Bundler](http://bundler.io/) automatically for some commands.
 * [__ccache__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/ccache) – Enable [ccache](http://ccache.samba.org/) to speed up compilation.
 * [__django__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/django) – Helper for Django Unit tests. Cleans the cached modules as well.
 * [__ec2__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/ec2) – Exports env variables for Amazon's EC2 management.
+* [__emacs__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/emacs) – Wrapper for [daemon](http://www.emacswiki.org/emacs/EmacsAsDaemon) functionality of [Emacs](https://www.gnu.org/software/emacs/).
 * [__emoji-clock__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/emoji-clock) – The current time with half hour accuracy as an emoji symbol.
 * [__extract__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/extract) – Plugin to expand or extract bundled & compressed files.
 * [__fish-spec__](https://github.com/bpinto/oh-my-fish/tree/master/plugins/fish-spec) - Unit testing as simple as fish. See the [README](fish-spec/README.markdown) for usage instructions.

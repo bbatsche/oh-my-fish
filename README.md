@@ -1,6 +1,30 @@
-# Oh My Fish!
+<p align="center">
+<a href="https://github.com/bpinto/oh-my-fish">
+<img width=20% src="https://cloud.githubusercontent.com/assets/958723/6883431/9beb62b0-d58b-11e4-902c-2f716859a7ad.png">
+</a>
+</p>
 
-[![Build Status](https://travis-ci.org/bpinto/oh-my-fish.svg?branch=master)](https://travis-ci.org/bpinto/oh-my-fish)
+<a name="omf"></a>
+
+<p align="center">
+
+<b><a href="#oh-my-fish">About</a></b>
+|
+<b><a href="#installation">Installation</a></b>
+|
+<b><a href="#usage">Usage</a></b>
+|
+<b><a href="#send-us-your-theme">Contribute</a></b>
+|
+<b><a href="#uninstall">Uninstall</a></b>
+|
+<b><a href="#license">License</a></b>
+</p>
+
+[![Build Status](https://travis-ci.org/bpinto/oh-my-fish.svg?branch=master)](https://travis-ci.org/bpinto/oh-my-fish) ![](https://img.shields.io/badge/Framework-Oh My Fish-blue.svg?style=flat) ![](https://img.shields.io/cocoapods/l/AFNetworking.svg) [![Join the chat at https://gitter.im/bpinto/oh-my-fish](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bpinto/oh-my-fish?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+# Oh My Fish!
 
 ### Why?
   Developing on a shell should be a pleasure. Our goal is to help developers that do not want to spend time configuring their own computer to spend time doing what they want.
@@ -70,3 +94,9 @@ We are hoping to collect a bunch of themes for our command prompts. You can see 
 ## Uninstall
 
     rm -rf ~/.oh-my-fish
+    
+## License
+
+[MIT](http://mit-license.org) © [Contributors](https://github.com/bpinto/oh-my-fish/graphs/contributors)
+
+[Logo](https://cloud.githubusercontent.com/assets/958723/6847746/8d1b95b0-d3a7-11e4-866a-6bdc1eea0fe6.png) by [marcker](https://github.com/marcker):small_blue_diamond: [Attribution CC 4.0](http://creativecommons.org/licenses/by/4.0/)
